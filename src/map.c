@@ -93,8 +93,6 @@ void	create_game(char *argv)
 
 	init_struct(&game);
 	get_size(&game, argv);
-	if ((&game)->height > 21)
-		print_error("Invalid map height");
 	file = open_file(argv);
 	get_map(&game, file);
 	check_content(&game);
